@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	display: inline-block;
+		
+}
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+.crystal {
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+
+}
+#ruby {
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    background: red
+}
+#emmerald{
+    background: green;
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+}
+#opal{
+    background: black;
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+}
+#sapphire{
+    background: blue;
+    margin: 5px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+}
