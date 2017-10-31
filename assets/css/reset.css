@@ -5,17 +5,17 @@
 	display: inline-block;
 		
 }
-.crystals{
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-}
-.crystal {
+.blocks{
     margin: 5px;
     border: 1px solid red;
     width: 200px;
     height: 200px;
-
+}
+.block {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
 }
 #ruby {
     margin: 5px;
