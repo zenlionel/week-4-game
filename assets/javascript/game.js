@@ -14,14 +14,7 @@ for (var i = 0; i < 4; i++) {
 
     });
 }
-$('#rando').html('Random Number is: ' + hiddenNum);
-if (randNum === hiddenNum) {
-    win++;
-    window.sessionStorage('win',win);
-    alert("You've found the right number!");
 
-
-}
 $('.newNum').on('click', function () {
     
     var addNums = parseInt($(this).attr(randNum));
@@ -37,5 +30,13 @@ if (total > hiddenNum) {
     loss ++;
     window.sessionStorage('loss', loss);
     alert("You didn't find the right number");
+
+}
+$('#rando').html('Random Number is: ' + hiddenNum);
+if (randNum === hiddenNum) {
+    win++;
+    window.sessionStorage('win',win);
+    alert("You've found the right number!");
+
 
 }
