@@ -89,42 +89,35 @@ $(document).ready(function() {
         }
       }
     
-      // Function to update our "current guess" number. We are passing in the crystal that was clicked as an argument.
+// Function to update our "current guess" number. 
       function updateMatchingNumber(crystal) {
-        // Update our "current guess" number based on which crystal was clicked.
         yourMatchingNumber += crystals[crystal.attr("data-name")].points;
       }
     
-      // Function that will render your "current guess" number to the page.
+// Function that will render your "current guess" number to the page.
       function renderMatchingNumber() {
         var scoreNumDiv = $("<div id='score-number'>").text(yourMatchingNumber);
         $("#score-area").html();
         $("#score-area").html(scoreNumDiv);
       }
     
-      // Call our functions to start the game!
+// Call our functions to start the game!
       setGame();
       updateDom();
       renderCrystals();
       renderMatchingNumber();
     
-      // Here we create an on.click event for the crystals.
+// Here we create an on.click event for the crystals.
       $(".crystals-button").on("click", function(event) {
-        // Update our "current guess" number and re-render it.
         updateMatchingNumber($(this));
         renderMatchingNumber();
     
-        // Check to see if we have won or lost.
-        // If our current guess number equals the target number..
         if (yourMatchingNumber === randomNum) {
-          // Increment wins, restart the game, and update the page.
           wins++;
           setGame();
           updateDom(true);
         }
-        // If our guess number exceeded our target number...
         else if (yourMatchingNumber > randomNum) {
-          // Increment losses, restart the game, and update the page.
           losses++;
           setGame();
           updateDom(false);
