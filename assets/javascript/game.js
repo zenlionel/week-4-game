@@ -102,6 +102,33 @@ $(document).ready(function() {
         $("#score-area").html(scoreNumDiv);
       }
     
-     
+      // Call our functions to start the game!
+      setGame();
+      updateDom();
+      renderCrystals();
+      renderMatchingNumber();
+    
+      // Here we create an on.click event for the crystals.
+      $(".crystals-button").on("click", function(event) {
+        // Update our "current guess" number and re-render it.
+        updateMatchingNumber($(this));
+        renderMatchingNumber();
+    
+        // Check to see if we have won or lost.
+        // If our current guess number equals the target number..
+        if (yourMatchingNumber === randomNum) {
+          // Increment wins, restart the game, and update the page.
+          wins++;
+          setGame();
+          updateDom(true);
+        }
+        // If our guess number exceeded our target number...
+        else if (yourMatchingNumber > randomNum) {
+          // Increment losses, restart the game, and update the page.
+          losses++;
+          setGame();
+          updateDom(false);
+        }
+      });
     
   });
