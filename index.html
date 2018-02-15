@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>Crystals Collector</title>
 
-
-</head>
-
-<body>
-    <p id="rando">Random Number HIDDEN</p>
-    <div class="block">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/crystalsCollector.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     
-        
+  </head>
+  <body>
+
+    <h1 id="title">Crystal Collector!</h1>
+
+    <div id="rules-area">
+      <h4>You will be given a random number at the start of the game.</h4>
+      <h4>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</h4>
+      <h4>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</h4>
+      <h4>The value of each crystal is hidden from you until you click on it.</h4>
+      <h4>Each time when the game starts, the game will change the values of each crystal</h4>
     </div>
-    <p id="your_guess">This is your total guessed thus far!</p>
 
+    <div id="screen">
+      <!-- Random Number Display -->
+      <div id="random-area"></div>
+      <!-- Wins/Losses Display -->
+      <div id="win-area"></div>
+    </div>
 
-    
-    <script src="assets/javascript/game.js" type="text/javascript"></script>
-</body>
+    <div>
+      <!-- Crystals -->
+      <div id="crystal-area"></div>
+      <div id="score-title">Your total score is:</div>
+      <!-- Score Display -->
+      <div id="score-area"></div>
+    </div>
 
+  </body>
 </html>
