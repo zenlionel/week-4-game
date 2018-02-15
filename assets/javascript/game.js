@@ -79,4 +79,29 @@ $(document).ready(function() {
         $("#win-area").append(pLosses);
       }
     
+// Function to render our crystals to the page.
+      function renderCrystals() {
+        for (var key in crystals) {
+          var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
+          var crystalImg = $("<img alt='image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
+          crystalDiv.append(crystalImg);
+          $("#crystal-area").append(crystalDiv);
+        }
+      }
+    
+      // Function to update our "current guess" number. We are passing in the crystal that was clicked as an argument.
+      function updateMatchingNumber(crystal) {
+        // Update our "current guess" number based on which crystal was clicked.
+        yourMatchingNumber += crystals[crystal.attr("data-name")].points;
+      }
+    
+      // Function that will render your "current guess" number to the page.
+      function renderMatchingNumber() {
+        var scoreNumDiv = $("<div id='score-number'>").text(yourMatchingNumber);
+        $("#score-area").html();
+        $("#score-area").html(scoreNumDiv);
+      }
+    
+     
+    
   });
